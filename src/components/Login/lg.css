@@ -1,0 +1,140 @@
+/* .logoimg {
+  margin-top: -80px;
+  margin-left: 100px;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.loginImg{
+  height: 300px;
+  width: 300px;
+}
+
+.emailtext {
+  width: 300px;
+  height: 40px;
+  border-radius: 20px;
+  margin-left: 75px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  filter: drop-shadow(0.10rem 0.10rem 0.1rem rgba(0, 0, 0, 0.5));
+}
+
+.loginButton {
+  width: 300px;
+  margin-left: 75px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: #0084D9;
+  color: white;
+  filter: drop-shadow(0.10rem 0.10rem 0.1rem rgba(0, 0, 0, 0.5));
+  margin-top: 25px;
+}
+
+.forgotpassword {
+  font-size: 1.0rem;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.formbackground {
+  border-radius: 30px;
+  height: 450px;
+  width: 450px;
+  padding-top: 130px;
+}
+ */
+
+ .container{
+  /* height: 100%;
+  width: 100%; */
+  overflow-y: hidden;
+  overflow-x: hidden;
+  text-align: center;
+  /* padding: 25px; */
+  float: left;
+ }
+
+
+.formbackground {
+  margin-top: 100px;
+  background: white;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  padding: 25px;
+  border-radius: 25px;
+  margin-left: 250px;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  float: right;
+}
+
+.logoimg {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  /* float: center; */
+}
+
+.loginImg{
+  /* width: 100%;
+  height: 100%; */
+  padding: 0;
+  border-radius: 0px;
+}
+
+.emailtext {
+  border-radius: 20px;
+  border: none;
+  background-color: #f2f2f2;
+  padding: 10px;
+  margin-bottom: 15px;
+  filter: drop-shadow(0.10rem 0.10rem 0.1rem rgba(0, 0, 0, 0.5));
+  border-radius: 20px;
+  width: 300px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+}
+
+  .loginButton {
+    background-color: #0084D9;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 10px;
+    border-radius: 20px;
+    width: 300px;
+    filter: drop-shadow(0.10rem 0.10rem 0.1rem rgba(0, 0, 0, 0.5));
+  }
+
+  .forgotpassword {
+    text-align: center;
+    margin-top: 10px;
+  }
+/* 
+  @media screen and (min-width: 768px) {
+    .formbackground {
+      max-width: 500px;
+    }
+
+    .logoimg {
+      margin-bottom: 30px;
+    }
+  }
+
+  @media screen and (min-width: 992px) {
+    .formbackground {
+      max-width: 400px;
+    }
+
+    .logoimg {
+      margin-bottom: 40px;
+    }
+  } */

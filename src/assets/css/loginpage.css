@@ -1,0 +1,76 @@
+.loginContainer {
+  display: flex;
+  flex-direction: row;
+  ;
+}
+
+.left {
+  flex: 1;
+}
+
+.loginImg {
+  width: 110%;
+  height: 80%;
+  margin: 50px;
+  float: left;
+}
+
+.right {
+  flex: 1;
+  padding: 100px;
+}
+
+.logoImg {
+  width: 50%;
+  height: 50%;
+  float: center;
+  margin-left: 60px;
+}
+
+.formbackground {
+  border-radius: 30px;
+  height: auto;
+  width: fit-content;
+  padding: 20px;
+  margin-left: 100px;
+  filter: drop-shadow(0.7rem 0.7rem 0.8rem  rgba(0.5, 0.5, 0.5, 0.5));
+  
+
+}
+
+.lblDesignLogin {
+  float: right;
+  width: 200px;
+  height: 30px;
+  margin-top: 20px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #555;
+}
+
+.emailtext {
+  width: 300px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: #e3e9ec;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  filter: drop-shadow(0.1rem 0.1rem 0.1rem rgba(0, 0, 0, 0.5));
+}
+
+.loginButton {
+  font-weight: 700;
+  width: 300px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: #0084d9;
+  color: white;
+  filter: drop-shadow(0.1rem 0.1rem 0.1rem rgba(0, 0, 0, 0.5));
+}
+
+.forgotPassword {
+  font-size: 1.0rem;
+  text-align: center;
+  font-weight: 700;
+}

@@ -1,0 +1,191 @@
+body {
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+hr {
+  /* background-color: black; */
+  /* border: none; */
+  size: 1;
+}
+
+.h3 {
+  /* font-family: roboto; */
+  font-size: 1.2rem;
+  color: rgb(6, 6, 6);
+  text-align: left;
+  padding: 0;
+  border: none;
+}
+
+.inside_card_padding {
+  padding: px;
+}
+
+.padnone {
+  padding: none;
+}
+
+/* 
+.row {
+  background-color: rgb(194, 135, 135);
+} */
+
+.rowstest {
+  /* background-color:#95D60A; */
+  text-align: center;
+  padding: 0;
+  align-items: center;
+  box-shadow: #555;
+
+}
+
+/* .test {
+  border-style:solid;
+  background-color: white;
+} */
+
+
+.column {
+  float: left;
+}
+
+.left {
+  width: 50%;
+  /* height: 50px; */
+  /* align-content: center; */
+
+}
+
+.middle,
+.right {
+  width: 25%;
+}
+
+.abc {
+  /* background-color: rgb(236, 153, 153); */
+  /* height: 100px; */
+  white-space: pre-line;
+  overflow: hidden;
+
+}
+
+.ab {
+  /* background-color: rgb(118, 107, 107); */
+  /* height: 100px; */
+  white-space: pre-line;
+  font-size: 10px;
+
+
+}
+
+.a {
+  /* background-color: rgb(235, 11, 11); */
+  /* height: 100px; */
+  white-space: pre-line;
+  font-size: 35px;
+
+}
+
+.col-4 {
+  /* border-style: double; */
+  /* padding: 0; */
+  padding-top: 10px;
+  align-content: center;
+}
+
+.col-6 {
+  /* border-style: double; */
+  padding: 0;
+  padding-left: 10px;
+}
+
+/* .col-2{
+  border-style: double;
+  padding: 0;
+} */
+/* .cardbody{
+padding: 0;
+} */
+
+.Length {
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  font-size: 1.0rem;
+  text-align: center;
+}
+
+.textcolor {
+  color: blue;
+  align-items: center;
+  margin-top: 5px;
+  text-align:center;
+  padding-bottom:0;
+  font-size:0.8rem;
+}
+
+.asd {
+  font-weight: bold;
+  color: #0c0c0c;
+
+}
+
+.ProgressBartest {
+  width: 100px;
+  height: 100px;
+
+}
+
+.indicator {
+  /* display: flex; */
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #555;
+  user-select: none;
+}
+
+svg.CircularProgressbar {
+  width: 70%;
+  font-size: 1.0rem;
+}
+
+svg text {
+  font-weight: 500;
+  font-size: 1.2rem;
+  text-align: center;
+  /* align-items: center; */
+}
+
+.speedometer {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 1.0rem;
+  font-weight: 500;
+}
+
+.svg {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.speed {
+  text-align: center;
+  
+}
+
+.Viewtime{
+  font-size: 0.8rem;
+  color:green;
+}
+.ViewtimelengthAndPower{
+  margin-top: 40px;
+  font-size: 0.8rem;
+  color:green;
+}

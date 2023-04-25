@@ -1,0 +1,184 @@
+.title {
+    padding-left: 10px;
+    padding-top: 0px;
+
+}
+
+.startBtn {
+    width: 100px;
+    height: 32px;
+    border-radius: 12px;
+    background-color: green;
+    font-size: 0.8rem;
+    padding: 0;
+    color: white;
+    box-shadow: none;
+    border: none;
+    padding: 0;
+}
+
+.stopBtn {
+    width: 100px;
+    height: 32px;
+    border-radius: 12px;
+    background-color: red;
+    font-size: 0.8rem;
+    color: white;
+    margin-left: 10px;
+    box-shadow: none;
+    border: none;
+}
+
+.columnrowbtnpadding {
+    float: right;
+    padding-left: 20px;
+    margin-right: 20px;
+    border-radius: 20px;
+    border: none;
+    /* margin-left: 1500px; */
+
+}
+
+.hrDesign {
+    padding: 10px;
+    margin: 0;
+}
+
+.leftrow {
+    width: 25%;
+}
+
+.rightrow {
+    width: 50%;
+    float: left;
+    line-height: 32px;
+    background-color: green;
+    text-align: center;
+    color: white;
+    font-size: 1.0rem;
+    border: none;
+    border-radius: 32px;
+    padding: 0;
+}
+
+.row1:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+.column1 {
+    padding-top: 5px;
+    padding-left: 20px;
+    padding-bottom: 5px;
+    float: left;
+    width: auto;
+    border: 10px;
+}
+
+/* Clear floats after the columns */
+.row1:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.linetitle {
+    margin: 0;
+    padding: 12px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.fontsize {
+    color: rgb(0, 0, 0);
+}
+
+.ptagRemove {
+    display: inline;
+    font-weight: normal;
+    color: rgb(0, 0, 0);
+    font-size: 0.8rem;
+}
+
+@media only screen and (max-width: 600px) {
+
+    .startBtn,
+    .stopBtn {
+        width: 70px;
+        height: 28px;
+        font-size: 0.7rem;
+    }
+}
+
+
+@media (max-width: 767px) {
+    .columnrowbtnpadding {
+        float: none;
+        padding-left: 10px;
+        margin-right: 10px;
+        border-radius: 10px;
+    }
+
+    .hrDesign {
+        padding: 5px;
+    }
+
+    .leftrow {
+        width: 100%;
+    }
+
+    .rightrow {
+        width: 100%;
+        float: none;
+        line-height: 24px;
+        border-radius: 24px;
+    }
+}
+
+
+.row1:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.linetitle {
+    margin: 0;
+    padding: 12px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.fontsize {
+    color: rgb(0, 0, 0);
+}
+
+.ptagRemove {
+    display: inline;
+    font-weight: normal;
+    color: rgb(0, 0, 0);
+    font-size: 0.8rem;
+}
+
+@media only screen and (max-width: 480px) {
+    .linetitle {
+        font-size: 0.6rem;
+    }
+
+    .fontsize {
+        font-size: 0.6rem;
+    }
+
+    .ptagRemove {
+        font-size: 0.6rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .hrDesign {
+      padding: 5px;
+    }
+  }
+  
