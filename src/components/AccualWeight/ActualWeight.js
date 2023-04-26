@@ -1,4 +1,3 @@
-//Nisal
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { getLocalhostUrl } from "components/url/Url.js";
