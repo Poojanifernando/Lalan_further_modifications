@@ -27,13 +27,22 @@ function ProductRegistrationForm() {
   //Get Product line details for the selector
   const [lineDetails, setLineDetails] = useState([]);
   //Get items(product lines) for the selector
-  //const [itemDetails, setItemDetails] = useState([]);
+  const [itemDetails, setItemDetails] = useState([]);
 
   //Get Selected value from the production line selector
   const [selectedLine, setSelectedLine] = useState("");
 
-  const handleOptionChange = (event) => {
+  //Get Selected value from the product selector
+  const [selectedProduct, setSelectedProduct] = useState("");
+
+  const handleOptionChangeLine = (event) => {
     setSelectedLine(event.target.value);
+    console.log(event.target.value);
+  };
+
+  const handleOptionChangeProduct = (event) => {
+    setSelectedProduct(event.target.value);
+    console.log(event.target.value);
   };
 
   // const lineHandleSubmit = (event) => {
@@ -48,6 +57,7 @@ function ProductRegistrationForm() {
       productName: "",
       description: "",
       image: "",
+      productLine: "",
     },
 
     validate: (values) => {
@@ -60,6 +70,9 @@ function ProductRegistrationForm() {
       }
       if (!values.description) {
         errors.description = " Item Description is required";
+      }
+      if (!values.productLine) {
+        errors.productLine = " Production Line Name is required";
       }
       return errors;
     },
@@ -88,11 +101,11 @@ function ProductRegistrationForm() {
     });
     //calling API to get items (products) details
 
-    /*axios
+    axios
       .get(myurl + "/api/v1/product/getAllProductsNameAndIds")
       .then((response) => {
         setItemDetails(response.data);
-      });*/
+      });
   }, []);
   return (
     <>
@@ -114,7 +127,7 @@ function ProductRegistrationForm() {
           <Card.Body style={{ paddingTop: "0" }}>
             <Form>
               <div className="row">
-                <div className="col-sm-5">
+                <div className="col-md-5">
                   <Form.Group className="formDesign">
                     <label className="lblDesign">ITEM CODE</label>
                     <Form.Control
@@ -179,9 +192,40 @@ function ProductRegistrationForm() {
                   </Form.Group>
                 </div>
 
-                <div className="col-sm-7">
+                <div className="col-md-7">
                   <div className="row">
-                    {/* <div className="col-sm-6">
+                    <div className="col-sm-6">
+                      <Form.Group className="formDesign">
+                        <label className="lblDesign">
+                          PRODUCTION LINE NAME
+                        </label>
+                        <Form.Select
+                          size="lg"
+                          className="form-control"
+                          name="productLine"
+                          style={{ borderRadius: "10px" }}
+                          //onSubmit={lineHandleSubmit}
+                          value={selectedLine}
+                          onChange={handleOptionChangeLine}
+                        >
+                          <option value="">Choose</option>
+                          {lineDetails.map((item) => {
+                            return (
+                              <option key={item.lineId} value={item.lineId}>
+                                {item.lineName}
+                              </option>
+                            );
+                          })}
+                        </Form.Select>
+                        {ProDetails.errors.productLine && (
+                          <div className="text-danger">
+                            {ProDetails.errors.productLine}
+                          </div>
+                        )}
+                      </Form.Group>
+                    </div>
+
+                    <div className="col-sm-6">
                       <Form.Group className="formDesign">
                         <label className="lblDesign">ITEMS</label>
                         <Form.Select
@@ -189,6 +233,8 @@ function ProductRegistrationForm() {
                           className="form-control"
                           name="product"
                           style={{ borderRadius: "10px" }}
+                          value={selectedProduct}
+                          onChange={handleOptionChangeProduct}
                         >
                           <option value="">Choose</option>
                           {itemDetails.map((item) => {
@@ -203,35 +249,12 @@ function ProductRegistrationForm() {
                           })}
                         </Form.Select>
                       </Form.Group>
-                    </div>*/}
-
-                    <div className="col-sm-6">
-                      <Form.Group className="formDesign">
-                        <label className="lblDesign">
-                          PRODUCTION LINE NAME
-                        </label>
-                        <Form.Select
-                          size="lg"
-                          className="form-control"
-                          name="product_lineid_ad"
-                          style={{ borderRadius: "10px" }}
-                          //onSubmit={lineHandleSubmit}
-                          value={selectedLine}
-                          onChange={handleOptionChange}
-                        >
-                          <option value="">Choose</option>
-                          {lineDetails.map((item) => {
-                            return (
-                              <option key={item.lineID} value={item.lineID}>
-                                {item.lineName}
-                              </option>
-                            );
-                          })}
-                        </Form.Select>
-                      </Form.Group>
                     </div>
                   </div>
-                  <ProductMaxMinTable selectedLine={selectedLine} />
+                  <ProductMaxMinTable
+                    selectedLine={selectedLine}
+                    selectedProduct={selectedProduct}
+                  />
                 </div>
               </div>
 
