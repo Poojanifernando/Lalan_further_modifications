@@ -26,7 +26,7 @@ import DeviceUpdate from "components/UpdateForms/DeviceUpdate";
 import ChangeOrder from "components/ChangeOrder/ChangeOrder";
 import Reports from "components/Reports/Reports";
 import ActualWeight from "components/AccualWeight/ActualWeight";
-
+import TestServiceScreen from "views/TestServiceScreen";
 
 
 
@@ -104,8 +104,15 @@ const dashboardRoutes = [
     layout: "/admin",
   },
 
+  {
+    path: `/TestServiceScreen`,
+    name: "Test Service Screen ",
+    icon: "nc-icon nc-notes",
+    component: TestServiceScreen,
+    layout: "/admin",
+  },
 
-  
+
   
   
  
