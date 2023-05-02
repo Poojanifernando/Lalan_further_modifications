@@ -10,38 +10,26 @@ import { Card, Table, Container, Row, Col } from "react-bootstrap";
 function ProductMaxMinTable(props) {
   const [url, seturl] = useState("");
   const [deviceList, setDeviceList] = useState([]);
+  const { selectedLine } = props;
+  const { selectedProduct } = props;
 
-  // useEffect(() => {
-  //   const myurl = getLocalhostUrl();
-  //   seturl(myurl);
-  //   if (props.selectedOption) {
-  //     axios
-  //       .get(
-  //         url + "/api/v1/admin/getDevicesTochangeMaxMin/" + props.selectedOption
-  //       )
-  //       .then((response) => {
-  //         setDeviceList(response.data);
-  //         console.log(response.data);
-  //       });
-  //   }
-  // }, [props.selectedOption]);
-
+  //Filter table data based on selected production line
   useEffect(() => {
     const myurl = getLocalhostUrl();
     seturl(myurl);
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          url + `/api/v1/admin/getDevicesTochangeMaxMin/${props.selectedLine}`
+          url +
+            `/api/v1/admin/getDevicesTochangeMaxMin/${selectedLine}/${selectedProduct}`
         );
         setDeviceList(response.data);
-        console.log(response.data);
       } catch (error) {
         console.error(error);
       }
     };
     fetchData();
-  }, [props.selectedOption]);
+  }, [selectedLine, selectedProduct]);
 
   return (
     <>
@@ -75,7 +63,7 @@ function ProductMaxMinTable(props) {
                           borderRadius: "0 0 0 0",
                         }}
                       >
-                        Item Count
+                        Machine Name
                       </th>
                       <th
                         style={{
@@ -87,7 +75,7 @@ function ProductMaxMinTable(props) {
                           borderRadius: "0 0 0 0",
                         }}
                       >
-                        Max
+                        Parameter
                       </th>
                       <th
                         style={{
@@ -111,8 +99,21 @@ function ProductMaxMinTable(props) {
                           borderRadius: "0 0 0 0",
                         }}
                       >
-                        Line
+                        Max
                       </th>
+                      <th
+                        style={{
+                          color: "#555",
+                          fontSize: "0.8rem",
+                          fontWeight: "700",
+                          lineHeight: "24px",
+                          textAlign: "flex-start",
+                          borderRadius: "0 0 0 0",
+                        }}
+                      >
+                        Unit
+                      </th>
+
                       {/* <th style={{ color: '#555', fontSize: "0.8rem", fontWeight: "700", lineHeight: "24px", textAlign: "flex-start", borderRadius: "0 0 0 0" }}>date_and_time</th> */}
                       <th
                         style={{
@@ -133,10 +134,11 @@ function ProductMaxMinTable(props) {
                       return (
                         <tr key={pro.line_id}>
                           <td>{pro.deviceid_dvc_reg}</td>
-                          <td>{pro.item_name}</td>
-                          <td>{pro.max}</td>
-                          <td>{pro.min}</td>
-                          <td>{pro.line_id}</td>
+                          <td>{pro.machine_name}</td>
+                          <td>{pro.parameter_id}</td>
+                          <td>{pro.min_value}</td>
+                          <td>{pro.max_value}</td>
+                          <td>{pro.measuring_unit}</td>
 
                           <td>
                             <Link
