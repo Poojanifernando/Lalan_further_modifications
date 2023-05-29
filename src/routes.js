@@ -27,7 +27,7 @@ import ChangeOrder from "components/ChangeOrder/ChangeOrder";
 import Reports from "components/Reports/Reports";
 import ActualWeight from "components/AccualWeight/ActualWeight";
 import TestServiceScreen from "views/TestServiceScreen";
-
+import ActualRawMaterials from "components/ActualRawMaterials/ActualRawMaterials";
 
 
 const dashboardRoutes = [
@@ -110,6 +110,13 @@ const dashboardRoutes = [
     icon: "nc-icon nc-notes",
     component: TestServiceScreen,
     layout: "/admin",
+  },
+  ,{
+    path: `/ActualRawMaterials`,
+    name: "Raw Materials",
+    icon: "nc-icon nc-map-big",
+    component: ActualRawMaterials,
+    layout: "/admin"
   },
 
 
