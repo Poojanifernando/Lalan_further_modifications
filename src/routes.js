@@ -118,6 +118,14 @@ const dashboardRoutes = [
     component: ActualRawMaterials,
     layout: "/admin"
   },
+  , 
+  {
+    path: "/TestingService",
+    name: "Testing Service",
+    icon: "nc-icon nc-puzzle-10",
+    component: TestingService,
+    layout: "/admin"
+  }
 
 
   
